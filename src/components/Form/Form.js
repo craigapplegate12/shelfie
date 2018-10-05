@@ -32,7 +32,7 @@ class Form extends Component {
     console.log(this.state);
   }
   handleAddToInventory() {
-
+    //TODO
   }
 
   render() {

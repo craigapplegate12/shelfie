@@ -1,11 +1,13 @@
 import React from 'react';
 
 
-function Product(){
- 
+function Product(name, price, image){
+    console.log(name, price,image)
     return (
       <div className="Product">
-        Product
+        <div>{name}</div>
+        <div>{price}</div>
+        <img src={image} alt ='' />
       </div>
     );
   }
