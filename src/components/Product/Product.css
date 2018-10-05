@@ -1,0 +1,15 @@
+.Product{
+    width: 350px;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: #d34735;
+}
+.product_img {
+    width: 320px;
+    height: 200px;
+    margin: 0 auto;
+ }
+ .product_box{
+    display: flex;
+    justify-content: space-between;
+ }

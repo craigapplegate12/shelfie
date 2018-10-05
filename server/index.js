@@ -5,8 +5,23 @@ const controller = require('./controller');
 const massive = require('massive');
 const app = express();
 const port=8080;
+const cors = require('cors')
 
 app.use(bodyParser.json());
+app.use(cors());
+
+
+app.get('/api/inventory', (req, res) => {
+    const db = req.app.get('db');
+
+    db.get_inventory()
+    .then(results => {
+        res.send(results)
+    })
+    .catch((err)=> {
+        console.log('error', err)
+    })
+}) 
 
 
 massive(process.env.DATABASE_STRING) 
